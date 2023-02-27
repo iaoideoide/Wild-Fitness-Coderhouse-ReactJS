@@ -1,0 +1,16 @@
+.counter {
+  display: flex;
+  margin: 40px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  width: fit-content;
+  font-family: var(--font-family);
+  font-size: 15px;
+}
+
+.counter button {
+  margin: 0px 20px 0px 20px;
+  background-color: transparent;
+  border: none;
+}
