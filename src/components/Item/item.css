@@ -1,0 +1,19 @@
+.item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.item p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+
+  margin: 0 1rem;
+}
+
+.item img {
+  max-width: 200px;
+}

@@ -3,6 +3,7 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
 import { BsFillCartFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-links_container">
           <p>
-            <a href="#">Inicio</a>
+            <Link to="/">Inicio</Link>
           </p>
           <p>
             <a href="#">Accesorios</a>
@@ -25,6 +26,9 @@ const Navbar = () => {
           </p>
           <p>
             <a href="#">Suplementos</a>
+          </p>
+          <p>
+            <Link to="/detail">detalle</Link>
           </p>
         </div>
         <div className="navbar-cart">

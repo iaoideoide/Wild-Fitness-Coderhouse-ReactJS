@@ -1,12 +1,14 @@
 .ItemListContainer {
   background: var(--color-bg);
-  height: 200px;
+  padding: 20px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .ItemListContainer h1 {
   color: var(--color-secundary);
   font-family: var(--font-family);
+  margin-bottom: 30px;
 }

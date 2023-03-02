@@ -13,7 +13,9 @@ const Counter = () => {
   };
 
   const decreaseCount = () => {
-    setCount((prevCount) => prevCount - 1);
+    if (count > 0) {
+      setCount((prevCount) => prevCount - 1);
+    }
   };
 
   const resetCount = () => {
