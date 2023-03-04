@@ -2,10 +2,10 @@ import React from "react";
 import "./itemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ greeting }) => {
   return (
     <div className="ItemListContainer">
-      <h1>WILD FITNESS</h1>
+      <h1>{greeting}</h1>
       <ItemList />
     </div>
   );

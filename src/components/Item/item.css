@@ -1,19 +1,39 @@
 .item {
-  background: #fff;
+  background: #383636;
   border-radius: 15px;
   padding: 10px;
+  max-width: 220px;
 }
 
 .item p {
+  color: #fff;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
+
+  text-align: center;
   text-transform: capitalize;
 
   margin: 0 1rem;
 }
 
 .item img {
-  max-width: 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.item__line {
+  background-color: var(--color-secundary);
+  border-radius: 50px;
+  width: 200px;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#item__title {
+  font-size: 25px;
+  margin-bottom: 5px;
 }

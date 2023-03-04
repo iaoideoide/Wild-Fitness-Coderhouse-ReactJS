@@ -1,0 +1,10 @@
+.cartWiget {
+  display: flex;
+  align-items: center;
+}
+
+.cartWiget__cant {
+  font-family: var(--font-family);
+  color: var(--color-secundary);
+  margin-left: 5px;
+}

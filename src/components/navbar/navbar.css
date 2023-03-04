@@ -23,17 +23,6 @@
   flex-direction: row;
 }
 
-.navbar-cart {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-cart__cant {
-  font-family: var(--font-family);
-  color: var(--color-secundary);
-  margin-left: 5px;
-}
-
 .navbar-links_container p,
 .navbar-menu_container {
   color: #fff;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
-import { BsFillCartFill } from "react-icons/bs";
+import CartWidget from "../CartWiget/CartWidget";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -27,13 +27,9 @@ const Navbar = () => {
           <p>
             <a href="#">Suplementos</a>
           </p>
-          <p>
-            <Link to="/detail">detalle</Link>
-          </p>
         </div>
         <div className="navbar-cart">
-          <BsFillCartFill color="#e31515" size={24} />
-          <span className="navbar-cart__cant">3</span>
+          <CartWidget />
         </div>
       </div>
 

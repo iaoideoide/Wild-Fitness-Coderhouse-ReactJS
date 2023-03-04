@@ -1,24 +1,28 @@
+import picMancuernas from "./assets/mancuernas.jfif";
+import picStraps from "./assets/straps.jpg";
+import picCreatina from "./assets/creatina.jpg";
+
 let Porducts = [
   {
-    id: 1,
+    id: 0,
     title: "mancuernas",
-    price: 1500,
+    price: "$1500",
     detail: "mancuernas de 2.5 a 25 kg",
-    pictureUrl: "foto",
+    pictureUrl: picMancuernas,
+  },
+  {
+    id: 1,
+    title: "Straps",
+    price: "$2500",
+    detail: "Straps para mejorar el agarre de la barra",
+    pictureUrl: picStraps,
   },
   {
     id: 2,
-    title: "barra olimpica",
-    price: 2500,
-    detail: "una barra de 20kg",
-    pictureUrl: "foto",
-  },
-  {
-    id: 3,
-    title: "discos",
-    price: 3500,
-    detail: "discos de 5 a 50 kg",
-    pictureUrl: "foto",
+    title: "creatina",
+    price: "$3500",
+    detail: "pote de creatina",
+    pictureUrl: picCreatina,
   },
 ];
 

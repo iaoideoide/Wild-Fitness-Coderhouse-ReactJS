@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Item from "../Item/Item";
 import "./itemList.css";
-import img from "../../assets/mancuernas.jfif";
 import Porducts from "../../Products";
 
 const ItemList = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const promesaItem = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(Porducts), 3000);
+      setTimeout(() => resolve(Porducts), 1000);
     });
 
     promesaItem.then((respuesta) => setProducts(respuesta));

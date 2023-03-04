@@ -1,23 +1,28 @@
-import React from "react";
-import img from "../../assets/mancuernas.jfif";
+import React, { useEffect, useState } from "react";
 import "./itemDetailContainer.css";
 import Counter from "../Counter/Counter";
+import { useParams } from "react-router-dom";
+import Porducts from "../../Products";
 
 const ItemDetailContainer = () => {
-  let producto = {
-    id: 1,
-    title: "mancuernas",
-    price: 1500,
-    detail: "mancuernas de 2.5 a 25 kg",
-    pictureUrl: img,
-  };
+  const [products, setProducts] = useState([]);
+  const params = useParams();
+  const idItem = params.idItem;
+  useEffect(() => {
+    const promesaItem = new Promise((resolve, reject) => {
+      setTimeout(() => resolve(Porducts[idItem]), 1000);
+    });
+
+    promesaItem.then((respuesta) => setProducts(respuesta));
+  }, []);
+
   return (
     <div className="itemDetailContainer">
       <div className="itemDetailContainer__container">
-        <img src={img} alt="imagen producto" />
-        <h1>{producto.title}</h1>
-        <h2>{producto.detail}</h2>
-        <h2>{producto.price}</h2>
+        <img src={products.pictureUrl} alt="imagen producto" />
+        <h1>{products.title}</h1>
+        <h2>{products.detail}</h2>
+        <h2>{products.price}</h2>
         <Counter />
       </div>
     </div>
