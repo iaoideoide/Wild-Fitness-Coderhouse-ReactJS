@@ -25,7 +25,8 @@ const ItemListContainer = ({ greeting }) => {
       }
     });
     promesaItem.then((respuesta) => setProducts(respuesta));
-  });
+  }, [params]);
+
   return (
     <div className="ItemListContainer">
       <h1>{greeting}</h1>
