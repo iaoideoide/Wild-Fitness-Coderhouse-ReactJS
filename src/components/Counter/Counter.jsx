@@ -25,14 +25,14 @@ const Counter = () => {
   return (
     <div className="counter">
       <button className="counter__btn" onClick={decreaseCount}>
-        <IoIosRemoveCircleOutline color="#000" size={24} />
+        <IoIosRemoveCircleOutline color="#fff" size={24} />
       </button>
       <h1>{count}</h1>
       <button className="counter__btn" onClick={increaseCount}>
-        <IoIosAddCircleOutline color="#000" size={24} />
+        <IoIosAddCircleOutline color="#fff" size={24} />
       </button>
       <button className="counter__btn" onClick={resetCount}>
-        <IoTrashSharp color="#000" size={24} />
+        <IoTrashSharp color="#fff" size={24} />
       </button>
     </div>
   );

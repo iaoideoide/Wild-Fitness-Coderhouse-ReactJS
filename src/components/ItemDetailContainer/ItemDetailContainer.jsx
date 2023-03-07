@@ -20,10 +20,14 @@ const ItemDetailContainer = () => {
     <div className="itemDetailContainer">
       <div className="itemDetailContainer__container">
         <img src={products.pictureUrl} alt="imagen producto" />
-        <h1>{products.title}</h1>
-        <h2>{products.detail}</h2>
-        <h2>{products.price}</h2>
-        <Counter />
+        <div className="itemDetailContainer-data-container">
+          <div className="itemDetailContainer__texts-container">
+            <h1>{products.title}</h1>
+            <h2>{products.price}</h2>
+            <h3>{products.detail}</h3>
+          </div>
+          <Counter />
+        </div>
       </div>
     </div>
   );

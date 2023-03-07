@@ -5,15 +5,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
 }
 .itemDetailContainer__container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--color-footer);
+  border-radius: 30px;
+  padding-right: 15px;
+}
+
+.itemDetailContainer-data__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .itemDetailContainer img {
-  max-width: 500px;
+  width: 307px;
+  height: 320px;
+  margin-right: 50px;
+  border-radius: 30px;
+}
+
+.itemDetailContainer h1 {
+  margin-bottom: 10px;
+}
+
+.itemDetailContainer h2 {
+  margin-bottom: 30px;
 }

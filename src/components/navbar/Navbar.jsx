@@ -12,20 +12,22 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-links">
         <div className="navbar-links_logo">
-          <img src={logo} />
+          <Link to="/">
+            <img src={logo} />
+          </Link>
         </div>
         <div className="navbar-links_container">
           <p>
             <Link to="/">Inicio</Link>
           </p>
           <p>
-            <a href="#">Accesorios</a>
+            <Link to="/category/accesorio">Accesorios</Link>
           </p>
           <p>
-            <a href="#">Equipamento</a>
+            <Link to="/category/equipamento">Equipamento</Link>
           </p>
           <p>
-            <a href="#">Suplementos</a>
+            <Link to="/category/suplemento">Suplementos</Link>
           </p>
         </div>
         <div className="navbar-cart">
@@ -51,16 +53,16 @@ const Navbar = () => {
           <div className="navbar-menu_container scale-up-center">
             <div className="navbar-menu_container-links">
               <p>
-                <a href="#">Inicio</a>
+                <Link to="/">Inicio</Link>
               </p>
               <p>
-                <a href="#">Accesorios</a>
+                <Link to="/category/accesorio">Accesorios</Link>
               </p>
               <p>
-                <a href="#">Equipamento</a>
+                <Link to="/category/equipamento">Equipamento</Link>
               </p>
               <p>
-                <a href="#">Suplementos</a>
+                <Link to="/category/suplemento">Suplementos</Link>
               </p>
             </div>
           </div>

@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Item from "../Item/Item";
 import "./itemList.css";
-import Porducts from "../../Products";
 
-const ItemList = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const promesaItem = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(Porducts), 1000);
-    });
-
-    promesaItem.then((respuesta) => setProducts(respuesta));
-  }, []);
-
-  console.log(products);
+const ItemList = ({ productos }) => {
+  console.log(productos);
 
   return (
     <div className="itemList">
-      {products.map((product) => (
+      {productos.map((product) => (
         <Item producto={product} />
       ))}
     </div>
