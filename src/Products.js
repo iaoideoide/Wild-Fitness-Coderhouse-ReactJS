@@ -9,7 +9,7 @@ let Porducts = [
     price: "$1500",
     detail: "mancuernas de 2.5 a 25 kg",
     pictureUrl: picMancuernas,
-    category: "equipamento",
+    category: "equipamentos",
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ let Porducts = [
     price: "$2500",
     detail: "Straps para mejorar el agarre de la barra",
     pictureUrl: picStraps,
-    category: "accesorio",
+    category: "accesorios",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ let Porducts = [
     price: "$3500",
     detail: "pote de creatina",
     pictureUrl: picCreatina,
-    category: "suplemento",
+    category: "suplementos",
   },
 ];
 

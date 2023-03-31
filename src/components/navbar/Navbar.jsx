@@ -21,13 +21,13 @@ const Navbar = () => {
             <Link to="/">Inicio</Link>
           </p>
           <p>
-            <Link to="/category/accesorio">Accesorios</Link>
+            <Link to="/category/accesorios">Accesorios</Link>
           </p>
           <p>
-            <Link to="/category/equipamento">Equipamento</Link>
+            <Link to="/category/equipamentos">Equipamento</Link>
           </p>
           <p>
-            <Link to="/category/suplemento">Suplementos</Link>
+            <Link to="/category/suplementos">Suplementos</Link>
           </p>
         </div>
         <div className="navbar-cart">
