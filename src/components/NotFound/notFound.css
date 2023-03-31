@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   padding: 200px 0px;
+  min-height: 71.6vh;
 }
 
 .notFound h2 {

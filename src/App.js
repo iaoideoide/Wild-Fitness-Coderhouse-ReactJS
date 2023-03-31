@@ -17,7 +17,10 @@ const App = () => {
           element={<ItemListContainer greeting={"WILD FITNESS"} />}
         />
         <Route path="/detail/:idItem" element={<ItemDetailContainer />} />
-        <Route path="/category/:categoryItem" element={<ItemListContainer />} />
+        <Route
+          path="/category/:categoryItem"
+          element={<ItemListContainer greeting={"WILD FITNESS"} />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
