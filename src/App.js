@@ -4,6 +4,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import NotFound from "./components/NotFound/NotFound";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
+import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -17,12 +18,15 @@ const App = () => {
           element={<ItemListContainer greeting={"WILD FITNESS"} />}
         />
         <Route path="/detail/:idItem" element={<ItemDetailContainer />} />
-        <Route path="/category/:categoryItem" element={<ItemListContainer greeting={"WILD FITNESS"} />} />
+        <Route
+          path="/category/:categoryItem"
+          element={<ItemListContainer greeting={"WILD FITNESS"} />}
+        />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
   );
 };
-
 export default App;
