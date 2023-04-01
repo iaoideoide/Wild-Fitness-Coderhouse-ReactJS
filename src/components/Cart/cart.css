@@ -1,5 +1,9 @@
 .cart {
-  background-color: var(--color-bg);
+  background: var(--color-bg);
+  background-image: url("../../assets/logo.png");
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-position: center;
   font-family: var(--font-family);
   display: flex;
   flex-direction: column;
@@ -14,4 +18,58 @@
   font-family: var(--font-family);
   margin-bottom: 30px;
   text-transform: uppercase;
+}
+
+.cart__list {
+  background-color: var(--color-bg);
+  border-spacing: 0;
+  border-radius: 5px;
+  border: solid 1px var(--color-secundary);
+  width: 45%;
+  margin: 15px auto;
+  text-align: center;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cart__list-head {
+  background-color: var(--color-secundary);
+  margin: 8px auto;
+}
+
+.cart__list-titles {
+  line-height: 56px;
+}
+
+.cart__list-img {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.cart__precio {
+  color: #fff;
+  text-align: center;
+  line-height: 1.5em;
+  width: 100%;
+}
+
+.cart__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cart__button-delete {
+  background-color: var(--color-secundary);
+  padding: 8px;
+  border-radius: 30px;
+  margin-bottom: 50px;
+}
+
+.cart__button-delete button {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  color: #fff;
 }

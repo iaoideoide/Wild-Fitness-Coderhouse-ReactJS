@@ -6,27 +6,30 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartContextProvider } from "./context/cartContext";
 import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={<ItemListContainer greeting={"WILD FITNESS"} />}
-        />
-        <Route path="/detail/:idItem" element={<ItemDetailContainer />} />
-        <Route
-          path="/category/:categoryItem"
-          element={<ItemListContainer greeting={"WILD FITNESS"} />}
-        />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={<ItemListContainer greeting={"WILD FITNESS"} />}
+          />
+          <Route path="/detail/:idItem" element={<ItemDetailContainer />} />
+          <Route
+            path="/category/:categoryItem"
+            element={<ItemListContainer greeting={"WILD FITNESS"} />}
+          />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </CartContextProvider>
   );
 };
 export default App;

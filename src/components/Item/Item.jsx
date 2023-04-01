@@ -11,7 +11,7 @@ const Item = ({ producto }) => {
         <div className="item__line"></div>
         <p id="item__title">{producto.title}</p>
         <p id="item__price">{producto.detail}</p>
-        <p id="item__detail">{producto.price}</p>
+        <p id="item__detail">${producto.price}</p>
       </div>
     </Link>
   );

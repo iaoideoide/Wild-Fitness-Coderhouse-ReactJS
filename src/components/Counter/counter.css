@@ -9,8 +9,19 @@
   font-size: 15px;
 }
 
-.counter button {
+.counter__btn {
   margin: 0px 20px 0px 20px;
   background-color: transparent;
   border: none;
+}
+
+.counter_addToCart {
+  font-family: var(--font-family);
+  color: #fff;
+  background-color: var(--color-secundary);
+  border: none;
+  padding: 0px 10px 0px 10px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 300;
 }
