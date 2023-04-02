@@ -5,18 +5,11 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import cartContext from "../../context/cartContext";
 import "./checkOut.css";
-import {
-  getFirestore,
-  collection,
-  doc,
-  getDoc,
-  addDoc,
-} from "firebase/firestore";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert";
 const CheckOut = () => {
   const navigate = useNavigate();
   const { cart, clear, cartTotal } = useContext(cartContext);
-  let total = cartTotal;
   const [valores, setValores] = useState({
     nombre: undefined,
     mail: undefined,
@@ -41,10 +34,7 @@ const CheckOut = () => {
   async function createOrder(orderData) {
     const collectionRef = collection(db, "orders");
 
-    console.log(orderData);
-
     const response = await addDoc(collectionRef, orderData);
-    console.log(response.id);
     Swal({
       title: "Compra realizada con exito!",
       text: "Gracias por tu compra!!, tu codigo de orden es " + response.id,
@@ -54,7 +44,6 @@ const CheckOut = () => {
   }
 
   async function checkOut() {
-    console.log("hola", valores);
     let orderData = valores;
     await createOrder(orderData);
     clear();

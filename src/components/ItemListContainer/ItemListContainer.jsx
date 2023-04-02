@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./itemListContainer.css";
 import ItemList from "../ItemList/ItemList";
-import Porducts from "../../Products";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -12,27 +11,6 @@ const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
   const params = useParams();
   const categoryItem = params.categoryItem;
-
-  /*
-  useEffect(() => {
-    const promesaItem = new Promise((resolve, reject) => {
-      if (categoryItem === undefined) {
-        setTimeout(() => resolve(Porducts), 1000);
-      } else {
-        setTimeout(
-          () =>
-            resolve(
-              Porducts.filter((product) => product.category === categoryItem)
-            ),
-          1000
-        );
-      }
-    });
-    promesaItem.then((respuesta) => setProducts(respuesta));
-  }, [params]);
-*/
-
-  // Config Firebase---------------------------------------------------------
 
   const firebaseConfig = {
     apiKey: "AIzaSyAww5F0mBfyqJv7XXumevzuwHANJ9ykheM",

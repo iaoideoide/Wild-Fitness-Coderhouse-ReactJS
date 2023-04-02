@@ -37,7 +37,6 @@ function CartContextProvider(props) {
 
   const cartTotal = () => {
     let total = cart.reduce((acc, item) => (acc = +item.count * item.price), 0);
-    console.log("ahh", total);
     return total;
   };
 

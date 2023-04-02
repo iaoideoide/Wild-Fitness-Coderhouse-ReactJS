@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./itemDetailContainer.css";
 import Counter from "../Counter/Counter";
 import { useParams } from "react-router-dom";
-import Porducts from "../../Products";
 import { useContext } from "react";
 import cartContext from "../../context/cartContext";
 import { initializeApp } from "firebase/app";
@@ -12,16 +11,6 @@ const ItemDetailContainer = () => {
   const [products, setProducts] = useState([]);
   const params = useParams();
   const idItem = params.idItem;
-
-  /*useEffect(() => {
-    const promesaItem = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(Porducts[idItem]), 1000);
-    });
-
-    promesaItem.then((respuesta) => setProducts(respuesta));
-  }, [idItem]);*/
-
-  // Config Firebase---------------------------------------------------------
 
   const firebaseConfig = {
     apiKey: "AIzaSyAww5F0mBfyqJv7XXumevzuwHANJ9ykheM",
@@ -36,14 +25,11 @@ const ItemDetailContainer = () => {
   const db = getFirestore(app);
 
   async function getSingleItemFromDatabase(idItem) {
-    // referencia de la colección y del documento
     const productsColectionRef = collection(db, "products");
     const docRef = doc(productsColectionRef, idItem);
 
-    // getDoc -> datos
     const docSnapshot = await getDoc(docRef);
 
-    // extra
     if (docSnapshot.exists() === false)
       throw new Error("No existe el documento");
 
@@ -58,9 +44,7 @@ const ItemDetailContainer = () => {
       .catch((error) => alert(error));
   }, []);
 
-  // -------------------------------------------------------------------------------
-
-  const { addItem, getCountInCart, isInCart } = useContext(cartContext);
+  const { addItem, isInCart } = useContext(cartContext);
 
   function onAddToCart(count) {
     alert(`Agregaste ${count} items al carrito`);
