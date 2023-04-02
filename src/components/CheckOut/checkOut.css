@@ -1,0 +1,55 @@
+.checkOut {
+  background: var(--color-bg);
+  background-image: url("../../assets/logo.png");
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-position: center;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  min-height: 71.6vh;
+}
+
+.checkOut h1,
+.checkOut h2 {
+  margin-top: 30px;
+  color: var(--color-secundary);
+  font-family: var(--font-family);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.checkOut_form {
+  display: flex;
+  flex-direction: column;
+}
+.checkOut_form input {
+  height: 50px;
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: #fff;
+  margin: 25px auto;
+  border: 2px solid var(--color-secundary);
+  border-radius: 13px;
+  padding: 10px;
+}
+.checkOut_form input::placeholder {
+  color: #fff;
+}
+
+.checkOut__button {
+  background-color: var(--color-secundary);
+  padding: 8px;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  color: #fff;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  color: #fff;
+}

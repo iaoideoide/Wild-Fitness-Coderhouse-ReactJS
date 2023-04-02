@@ -3,6 +3,7 @@ import { useContext } from "react";
 import "./cart.css";
 import { RxCross2 } from "react-icons/rx";
 import cartContext from "../../context/cartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cart, removeItem, clear } = useContext(cartContext);
@@ -17,6 +18,7 @@ const Cart = () => {
   }
   let total = 0;
   cart.forEach((products) => (total += products.price * products.count));
+
   return (
     <div className="cart">
       <h1>Tu Carrito</h1>
@@ -68,6 +70,9 @@ const Cart = () => {
       <div className="cart__precio">
         <h4>El total de tu compra es de $ {total}</h4>
       </div>
+      <Link to="/checkOut">
+        <button className="cart__button-delete">Terminar Compra</button>
+      </Link>
     </div>
   );
 };

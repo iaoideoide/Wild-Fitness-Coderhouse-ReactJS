@@ -7,8 +7,16 @@ const cartContext = createContext({
 function CartContextProvider(props) {
   const [cart, setCart] = useState([]);
 
+  const isInCart = (productId) => {
+    return cart.some((product) => product.id === productId);
+  };
+
   function addItem(products) {
-    setCart([...cart, products]);
+    if (cart.includes(products)) {
+      return;
+    } else {
+      setCart([...cart, products]);
+    }
   }
 
   function removeItem(id) {
@@ -27,9 +35,23 @@ function CartContextProvider(props) {
     return total;
   }
 
+  const cartTotal = () => {
+    let total = cart.reduce((acc, item) => (acc = +item.count * item.price), 0);
+    console.log("ahh", total);
+    return total;
+  };
+
   return (
     <cartContext.Provider
-      value={{ cart, addItem, getCountInCart, removeItem, clear }}
+      value={{
+        cart,
+        addItem,
+        getCountInCart,
+        removeItem,
+        clear,
+        isInCart,
+        cartTotal,
+      }}
     >
       {props.children}
     </cartContext.Provider>
